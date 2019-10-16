@@ -17,5 +17,6 @@ int main()
   else 
 
   cout<<"Maalesef Sınavdan Kaldınız!";  
+  
 return 0;  
 }  
