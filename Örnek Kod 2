@@ -1,0 +1,23 @@
+//
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main ()
+{
+  int toplam,sayac;
+	double ortalama;
+	toplam =0;
+	
+  sayac =1;
+	while(sayac<=100)
+	{
+	toplam=toplam+sayac;
+	sayac=sayac+1;
+	}
+	ortalama=static_cast<double>(toplam)/(sayac-1);
+	
+  cout<<"Sayilarin Toplami : "<<toplam<<endl;
+	cout<<"Sayilarin Ortalamasi : "<<ortalama<<endl;
+  
+return 0;
+}
