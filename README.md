@@ -1,2 +1,2 @@
 # Bilgisayar-Programlama-EEM0103
-Derste yapılan örnekler
+Ders boyunca yazılan&derlenen&çalıştırılan kodlar
