@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+	int sayac,toplam;
+	double ortalama;
+	toplam=0;
+	cout<<"1 ile 100 arasinda 7 ile bolunebilen sayilar:"<<endl;
+	for( int i=1;i<=100;i++)
+	{
+		if(i%7==0)
+		{
+			toplam=toplam+i;
+			sayac=sayac+1;
+			cout<<i<<endl;
+		}
+	}
+	cout<<"1 ile 100 arasinda 7 ile bolunebilen sayilarin toplami:"<<toplam<<endl;
+	ortalama=static_cast<double>(toplam)/sayac;
+	cout<<"i le 100 arasinda 7 ile bolunebilen sayilarin ortalamasi:"<<setprecision(4)<<ortalama<<endl;
+return 0;
+}
