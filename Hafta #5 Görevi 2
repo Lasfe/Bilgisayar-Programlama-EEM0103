@@ -1,3 +1,4 @@
+//100 den küçük sayıların 7 ile bölümünden kalanı inceleme ve bu sayıalrın toplamını ve ortalamasını gösterme
 #include <iostream>
 #include <iomanip>  
 #include <math.h>
