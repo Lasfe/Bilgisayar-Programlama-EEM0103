@@ -1,3 +1,4 @@
+// 1-100 arasında 7 ile bölünen sayıların gösterimi ve bunların ortalama ve toplmaının gösterimi
 #include <iostream>
 #include <iomanip>
 #include <locale.h>
@@ -19,8 +20,8 @@ int main()
 			cout<<""<<i<<endl;
 		}
 	}
-	cout<<"\n1 ile 100 arasinda 7 ile bölünebilen sayıların toplamı : "<<toplam<<endl;
+	cout<<"\n1 ile 100 arasında 7 ile bölünebilen sayıların toplamı : "<<toplam<<endl;
 	ortalama=static_cast<double>(toplam)/sayac;
-	cout<<"i le 100 arasinda 7 ile bölünebilen sayıların ortalaması : "<<setprecision(4)<<ortalama<<endl;
+	cout<<"i le 100 arasında 7 ile bölünebilen sayıların ortalaması : "<<setprecision(4)<<ortalama<<endl;
 return 0;
 }
