@@ -27,7 +27,7 @@ int main()
 	{
 	cout<<"\t3 ile Tam Bölünemez"<<endl;
 	}
-  }
+  	}
   
 	ortalama=toplam/sayac;
 	cout<<"\tOrtalama : "<<ortalama;
