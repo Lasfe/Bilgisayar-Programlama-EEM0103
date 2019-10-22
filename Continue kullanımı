@@ -1,3 +1,4 @@
+//Örnek continue kullanımı
 #include <iostream>
 using namespace std;
 int main()
