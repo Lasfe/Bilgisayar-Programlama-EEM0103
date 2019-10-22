@@ -1,4 +1,4 @@
-//Dört işlemi yapabilen hesap makinesi :)
+//Dört işlemi yapabilen hesap makinesi :) (Bölüm işleminin anlamlı rakam sayısının nasıl ayarlanabildiğini sor!)
 #include <iostream>
 #include <locale.h>
 using namespace std;
