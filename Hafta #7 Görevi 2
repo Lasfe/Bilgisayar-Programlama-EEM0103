@@ -1,3 +1,4 @@
+//Herhangi bir basamaklı sayının rakamlar toplamı
 #include <iostream>
 using namespace std;
 int main ()
