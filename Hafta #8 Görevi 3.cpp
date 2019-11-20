@@ -18,7 +18,7 @@ int main()
   	cin>>a;
   }
 	
-cout<<"Denklemi Kökü: "<<Kok(a,b)<<endl; 
+cout<<"Denklemin Kökü: "<<Kok(a,b)<<endl; 
 
 return 0; 
 } 
