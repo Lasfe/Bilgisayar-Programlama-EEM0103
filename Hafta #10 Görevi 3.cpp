@@ -2,11 +2,11 @@
 #include <iostream>
 using namespace std;
 
-int Maksimum(int,int,int,int);
+int Maksimum(int,int,int);
 int main ()
 {
 	setlocale(LC_ALL,"Turkish");
-	int sayi1,sayi2,sayi3,enBuyuk;
+	int sayi1,sayi2,sayi3;
 	
 	cout<<"Üç adet sayı giriniz."<<endl;
 	cin>>sayi1>>sayi2>>sayi3;
@@ -17,16 +17,14 @@ int main ()
 		cin>>sayi1>>sayi2>>sayi3;
 	}
 	
-	cout<<"Girilen sayılardan en büyüğü ="<<Maksimum(sayi1,sayi2,sayi3,enBuyuk)<<endl;
+	cout<<"Girilen sayılardan en büyüğü ="<<Maksimum(sayi1,sayi2,sayi3)<<endl;
 	return 0;	
 }
 
-int Maksimum(int sayi1,int sayi2,int sayi3,int enBuyuk)
+int Maksimum(int sayi1,int sayi2,int sayi3)
 
 {
-	 sayi1,sayi2,sayi3,enBuyuk;
-	
-		enBuyuk=sayi1;
+	int enBuyuk=sayi1;
 	
 	if(sayi2>enBuyuk)
 	{
