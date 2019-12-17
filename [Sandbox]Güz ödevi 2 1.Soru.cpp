@@ -18,7 +18,7 @@ int main()
 	
 	for(int x=0;x<20;x++)	//Döngü ile sayıları doldurma işlemi.
 	{
-	dizi[x]=rand()%37+27;	//Dizinin aralığı.
+	dizi[x]=rand()%10+27;	//Dizinin aralığı.
 	}
 	
 	if(dizi[x]>dizi[x+1])	//Küçükten büyüğe sıralama.
