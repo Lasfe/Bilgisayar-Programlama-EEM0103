@@ -47,46 +47,62 @@ int Buyukluk(int a)	//En büyük ve en küçük elemanın tesbiti.
 }
 
 /*
-//Soru 2 Palindrom kelimeler.
-#include <iostream>
-using namespace std;
+Worked !!!
 
-int Palindrom(string, int, int);	//Bu kodda Fonksiyon yardımı ile palindrom bulacağız.
+//Soru 1
+#include <iostream>
+#include <iomanip> //to use setw
+#include <cstdlib>
+#include <ctime> //to use srand
+using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL,"Turkish");
-	int sonKarakter;
-	string kelime;
+	setlocale(LC_ALL,"Turkish"); //to use Turkish language
+	int dizi[20];
+	int enBuyuk, enKucuk,temp;
+	srand(time(0)); //to get different elements in every run
 	
-	cout << "Bir kelime girin: ";	//Kelimenin nokta ile bitmesine gerek yok.
-	cin >>kelime;
+	for(int i=0; i<20; i++)
+	dizi[i]=rand()%10+27;	
+	cout<<"Eleman"<<setw(14)<<"Değer"<<endl;
 	
-	sonKarakter = kelime.length();	//Kelimenin uzunluğu
-	Palindrom(kelime, 0, sonKarakter-1);
+	for(int j=0; j<20; j++)
+	{
+		cout<<setw(3)<<j+1<<setw(16)<<dizi[j]<<endl;
+	}
+	
+	for(int i=0; i<20; i++)  //have to find a way to use it in func
+	{
+		if(dizi[0] < dizi[i])
+    	dizi[0] = dizi[i];
+	}
+    
+    cout<<"\n En büyük sayı: "<<dizi[0]<<endl;
+
+	for(int i=0; i<20; i++) //have to find a way to use it in func
+	{
+		if(dizi[0] > dizi[i])
+    	dizi[0] = dizi[i];
+	}
+	cout<<"\n En küçük sayı: "<<dizi[0]<<endl;	
+
+	for(int i=0;i<20-1;i++) // to sort numbers 
+	{
+		for(int j=0;j<20-1;j++) 
+		{ 
+			if(dizi[j]>dizi[j+1]) 
+			{ 
+			temp=dizi[j]; 
+			dizi[j]=dizi[j+1]; 
+			dizi[j+1]=temp; 
+			} 
+		}
+	}
+	cout<<"\n Küçükten büyüğe sıralama: "<<endl<<endl;
+	for (int i=0;i<20;i++)
+	cout<<" "<<dizi[i]<<" ";
+	return 0;	
 }
 
-int Palindrom(string kelime, int ilkKarakter, int sonKarakter)	//Fonksiyonumuz.
-{
-	if(kelime[ilkKarakter] == kelime[sonKarakter])	//Kontroller
-	{
-		if(sonKarakter > ilkKarakter)
-		{
-		Palindrom(kelime, ilkKarakter+1, sonKarakter-1);
-		}
-		else
-		{
-		cout <<"Bu kelimenin tersten okunuşu aynıdır!"; 
-		}
-	}
-	
-	else
-	{
-	cout <<"Bu kelimenin tersten okunuşu aynı değildir!";
-	}
-	
-	cout << "\n\n";
-	
-return main();
-}
 */
