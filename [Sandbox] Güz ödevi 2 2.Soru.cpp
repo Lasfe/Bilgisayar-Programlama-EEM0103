@@ -13,8 +13,8 @@ int main()
 	cout << "Bir kelime girin: ";	//Kelimenin nokta ile bitmesine gerek yok.
 	cin >>kelime;
 	
-	sonKarakter = kelime.length();	//En önemli kısım.
-	Palindrom(kelime, 0, sonKarakter-1);	//Fonksiyonu çağırma.
+	sonKarakter = kelime.length();	//Kelimenin uzunluğu
+	Palindrom(kelime, 0, sonKarakter-1);
 }
 
 int Palindrom(string kelime, int ilkKarakter, int sonKarakter)	//Fonksiyonumuz.
