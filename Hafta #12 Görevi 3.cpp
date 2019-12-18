@@ -10,7 +10,7 @@ int main()
   cout<<"Eleman"<<setw(10)<<"Değer"<<endl;
   
   for(int j=0;j<5;j++)
-  cout<<setw(5)<<j+1<setw(10)<<n[j]<<endl;
+  cout<<setw(5)<<j+1<<setw(10)<<n[j]<<endl;
   
  return 0;
  }
