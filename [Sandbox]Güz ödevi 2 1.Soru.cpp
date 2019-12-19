@@ -1,108 +1,71 @@
-//Soru 1 Dizi
-#include <iostream>
-#include <iomanip>
-#include <cstdlib>
-#include <ctime>
+//27-26 arası rastgele sayılardan oluşan bir dizi.
+//Her çalıştırmada farklı bir dizi oluşmalı.
+//Dizi 20 elemanlı olmalı.
+//Eleman atama işlemi döngü ile yapılmalı.
+//Dizinin elemanları en küçükten en büyüğe doğru sıralanmalı.
+//Dizinin en büyük ve en küçük elemanı fonksiyon yardımıyla tesbit edilmeli.
+
+#include <iostream>	//cout ve cin için
+#include <iomanip>	//setw için
+#include <cstdlib>	//rand() için
+#include <ctime>	//time(0) için
+
 using namespace std;
-
-int Buyukluk(int);
-
 int main()
 {
 	setlocale(LC_ALL,"Turkish");
-	int dizi[20];	//20 elemanlı dizi.
-	int kontrol;
-	int x;
 	
-	srand(time(0));	//Her çalıştırmada farklı sayılar.
+	int dizi[20];	//20 elemanlı dizi
+	int kontrol, enBuyuk, enKucuk ;	//Kullanılan değişkenler.
 	
-	for(int x=0;x<20;x++)	//Döngü ile sayıları doldurma işlemi.
+	srand(time(0));	//Her çalıştırmada farklı elemanlar için.
+	
+	for(int i=0; i<20; i++)	//Dizinin elemanlarını döngü ile atama işlemi.
+	dizi[i]=rand()%10+27;	//27-36 arası rastgele sayılar.
+		
+	cout<<"Eleman"<<setw(13)<<"Değer"<<endl;	//Elemanları ekrana yazdırma.
+	
+	for(int j=0; j<20; j++)	//Elemanları ekrana yazdırma.
 	{
-	dizi[x]=rand()%10+27;	//Dizinin aralığı.
+		cout<<setw(6)<<j+1<<setw(13)<<dizi[j]<<endl;
 	}
 	
-	if(dizi[x]>dizi[x+1])	//Küçükten büyüğe sıralama.
-	{ 
-	kontrol=dizi[x];
-	dizi[x]=dizi[x+1];
-	dizi[x+1]=kontrol;
-	}
 	
-	cout<<"Eleman"<<setw(13)<<"Değer"<<endl;
-	
-	for(int y=0;y<20;y++)
-	cout<<setw(6)<<y+1<<setw(13)<<dizi[x]<<endl;	//Elemanları ekrana yazdırma.
-	
-	//En büyük ve en küçük elemanı yazdırma
-	/*
-	cout<<"Dizinin en büyük elemanı ="<<needbig<<endl;
-	cout<<"Dizinin en küçük elemanı ="<<needsmall<<endl;
-	*/
-	
-}
-
-int Buyukluk(int a)	//En büyük ve en küçük elemanın tesbiti.
-{
-
-}
-
-/*
-Worked !!!
-
-//Soru 1
-#include <iostream>
-#include <iomanip> //to use setw
-#include <cstdlib>
-#include <ctime> //to use srand
-using namespace std;
-
-int main()
-{
-	setlocale(LC_ALL,"Turkish"); //to use Turkish language
-	int dizi[20];
-	int enBuyuk, enKucuk,temp;
-	srand(time(0)); //to get different elements in every run
-	
-	for(int i=0; i<20; i++)
-	dizi[i]=rand()%10+27;	
-	cout<<"Eleman"<<setw(14)<<"Değer"<<endl;
-	
-	for(int j=0; j<20; j++)
-	{
-		cout<<setw(3)<<j+1<<setw(16)<<dizi[j]<<endl;
-	}
-	
-	for(int i=0; i<20; i++)  //have to find a way to use it in func
+	//En büyük sayıyı bulma.
+	for(int i=0; i<20; i++)  //Bu kısım fonksiyon ile yapılmalı.
 	{
 		if(dizi[0] < dizi[i])
     	dizi[0] = dizi[i];
 	}
-    
     cout<<"\n En büyük sayı: "<<dizi[0]<<endl;
-
-	for(int i=0; i<20; i++) //have to find a way to use it in func
+    
+    
+    //En küçük sayıyı bulma.
+	for(int i=0; i<20; i++) //Bu kısım fonksiyon ile yapılmalı.
 	{
 		if(dizi[0] > dizi[i])
     	dizi[0] = dizi[i];
 	}
-	cout<<"\n En küçük sayı: "<<dizi[0]<<endl;	
-
-	for(int i=0;i<20-1;i++) // to sort numbers 
+	cout<<"\n En küçük sayı: "<<dizi[0]<<endl;
+	
+	
+	//Elemanları küçükten büyüğe sıralama.	
+	for(int i=0;i<20-1;i++) 
 	{
 		for(int j=0;j<20-1;j++) 
 		{ 
 			if(dizi[j]>dizi[j+1]) 
 			{ 
-			temp=dizi[j]; 
+			kontrol=dizi[j]; 
 			dizi[j]=dizi[j+1]; 
-			dizi[j+1]=temp; 
+			dizi[j+1]=kontrol; 
 			} 
 		}
 	}
-	cout<<"\n Küçükten büyüğe sıralama: "<<endl<<endl;
+	cout<<"\n Elemanların küçükten büyüğe sıralaması = "<<endl<<endl;
+	
 	for (int i=0;i<20;i++)
 	cout<<" "<<dizi[i]<<" ";
-	return 0;	
+	
+return 0;	
 }
-
-*/
